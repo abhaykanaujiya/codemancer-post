@@ -16,13 +16,14 @@ export const FormNav = () => {
       className="parent-nav"
       style={{
         border: " 1px solid lightgray",
-        boxShadow: "1px 0px 5px 1px lightgrey",
-        height: "50vw",
-        marginTop: "10px",
+        boxShadow: " 0px 0px 2px 3px  lightgrey",
+margin: "10px",
+        // marginTop: "10px",
         display: "flex",
         flexFlow: "column",
         justifyContent: "space-between",
         background: " white",
+        width: " 47vw",
       }}
     >
       <nav
@@ -33,6 +34,7 @@ export const FormNav = () => {
           backgroundColor: " #e9e9e9",
           justifyContent: "space-between",
           alignItems: " center",
+          cursor: "context-menu",
         }}
       >
         <div
@@ -92,8 +94,8 @@ export const FormNav = () => {
       {open ? <Form /> : null}
       <div className="footer">
         <select className="select">
-          <oprtion>only me</oprtion>
-          <option>friends</option>
+          <oprtion></oprtion>
+          <option>only me</option>
           <option>friends</option>
         </select>
         <button className="button">Post</button>

@@ -36,7 +36,7 @@ hr {
   font-weight: 400;
   font-size: 11px;
   display: flex;
-  
+
   align-items: center;
 }
 .btn-2 {
@@ -74,6 +74,8 @@ hr {
 .button {
   margin-left: 6px;
   margin-right: 10px;
+  background: #0000e7;
+  color: white;
 }
 /* .parent-nav {
   border: "2px solid";
