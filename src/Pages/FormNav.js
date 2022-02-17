@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import pen from "../Icons/pencil.png";
 import photo from "../Icons/photo-video.png";
 import crossed from "../Icons/letter-x.png";
+import lock from "../Icons/locks.png";
 import "./Blogs.css";
 import { Form } from "./Form";
-export const FormNav = () => {
-  const [open, setOpen] = useState(false);
+import { connect } from "react-redux";
+import { BlogRducers } from "../Reducers/BlogRducers";
+import { Gif } from "./GifSearch";
+const FormNav = (props) => {
+  // const [open, setOpen] = useState(false);
   const handlePost = () => {
     console.log("hello");
-    setOpen(true);
+    // setOpen(true);
   };
 
   return (
@@ -17,13 +21,13 @@ export const FormNav = () => {
       style={{
         border: " 1px solid lightgray",
         boxShadow: " 0px 0px 2px 3px  lightgrey",
-margin: "10px",
-        // marginTop: "10px",
+        // margin: "10px",
+
         display: "flex",
         flexFlow: "column",
         justifyContent: "space-between",
         background: " white",
-        width: " 47vw",
+        // width: " 48vw",
       }}
     >
       <nav
@@ -44,7 +48,11 @@ margin: "10px",
             backgroundColor: " #e9e9e9",
           }}
         >
-          <div className="btn-1" onClick={handlePost}>
+          <div
+            className="btn-1"
+            onClick={handlePost}
+            style={{ backgroundColor: "whitesmoke", width: "95px" }}
+          >
             <img
               src={pen}
               alt="img"
@@ -91,15 +99,40 @@ margin: "10px",
           </div>
         </div>
       </nav>
-      {open ? <Form /> : null}
+      {/* {open ? <Form /> : null} */}
+      <Form />
       <div className="footer">
-        <select className="select">
-          <oprtion></oprtion>
-          <option>only me</option>
-          <option>friends</option>
-        </select>
+        {props.isOpen? <Gif />:null}
+       
+        <div style={{ border: "1px solid" }}>
+          <img
+            src={lock}
+            alt="img"
+            style={{ width: "10px", marginRight: "-10px" }}
+          />
+          <select
+            className="select"
+            style={{ background: "aliceblue", border: " none" }}
+          >
+            <oprtion></oprtion>
+            <option>only me</option>
+            <option>friends</option>
+          </select>
+        </div>
         <button className="button">Post</button>
       </div>
     </div>
   );
 };
+
+const mapStateToProps = ({BlogRducers}) => {
+  const { gifyData, searchData, selectedData, searchText ,isOpen} = BlogRducers;
+  return {
+    gifyData,
+    searchData,
+    selectedData,
+    searchText,
+    isOpen,
+  };
+};
+export default connect(mapStateToProps,{})(FormNav);

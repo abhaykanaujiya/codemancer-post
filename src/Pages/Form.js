@@ -1,11 +1,13 @@
 import React, {  useState } from "react";
 import { Gif } from "./GifSearch";
-import user  from "../Icons/user.png";
+import user from "../Icons/user.png";
+import "./Gif.css";
+import { ColorBlocks } from "./ColorBlocks";
 export const Form = (props) => {
   const [isopen, setIsOpen] = useState(false);
 
 
-
+  
   const handleGifClick = () => {
     setIsOpen(!isopen);
   };
@@ -14,17 +16,17 @@ export const Form = (props) => {
     <div
       className="form-body"
       style={{
-          width:" 46 vw",
+        width: " 46 vw",
         border: "2px solid",
         backgroundColor: "whitesmoke",
         display: "flex",
         flexFlow: "column",
         paddingLeft: "10px",
         paddingRight: "10px",
-        paddingTop:"10px"
+        paddingTop: "10px",
       }}
     >
-      <div style={{display:"flex",flexFlow:"row"}}>
+      <div style={{ display: "flex", flexFlow: "row" }}>
         <img src={user} style={{ width: "90px", height: "80px" }} />
         <input
           className="input-field"
@@ -34,10 +36,15 @@ export const Form = (props) => {
         ></input>
       </div>
 
-      <div>
+      <div style={{display:"flex",flexFlow:"row",justifyContent:"space-around"}}>
         <button
           style={{ width: "20px", height: "20px", backgroundColor: "gray" }}
         ></button>
+
+        <div>
+          {" "}
+          <ColorBlocks />
+        </div>
       </div>
       <div
         className="Tags"
@@ -51,26 +58,30 @@ export const Form = (props) => {
       >
         <div style={{ display: "flex", flexFlow: "row" }}>
           <div
+            className="hover"
             style={{
-              border: "1px solid",
+              border: "1px solid lightgrey",
               width: "22vw",
               textAlign: "center",
               marginTop: "10px",
               borderRadius: "1rem",
-              background: " #e9e9e9",
+              marginRight: "10px",
+              // background: " #e9e9e9",
             }}
           >
             Tag Friends
           </div>
 
           <div
+            className="hover"
             style={{
-              border: "1px solid",
+              border: "1px solid lightgrey",
               width: "22vw",
               textAlign: "center",
               marginTop: "10px",
               borderRadius: "1rem",
-              background: " #e9e9e9",
+
+              // background: " #e9e9e9",
             }}
           >
             Chek in
@@ -79,33 +90,38 @@ export const Form = (props) => {
 
         <div style={{ display: "flex", flexFlow: "row" }}>
           <div
+            className="hover"
             onClick={handleGifClick}
             style={{
-              border: "1px solid",
+              border: "1px solid lightgrey",
               width: "22vw",
               marginTop: "10px",
               textAlign: "center",
               borderRadius: "1rem",
-              background: " #e9e9e9",
+              marginRight: "10px",
+              // backgroundColor:"white"
             }}
           >
             Gif
           </div>
-          <div>{isopen ? <Gif /> : null}</div>
+
           <div
+            className="hover"
             style={{
-              border: "1px solid",
+              border: "1px solid lightgrey",
+
               width: "22vw",
               marginTop: "10px",
               textAlign: "center",
               borderRadius: "1rem",
-              background: " #e9e9e9",
+              // background: " #e9e9e9",
             }}
           >
             Tag Event
           </div>
         </div>
       </div>
+      <div className="gif">{isopen ? <Gif /> : null}</div>
     </div>
   );
 };
