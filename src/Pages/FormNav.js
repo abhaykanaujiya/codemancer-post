@@ -4,17 +4,18 @@ import photo from "../Icons/photo-video.png";
 import crossed from "../Icons/letter-x.png";
 import lock from "../Icons/locks.png";
 import "./Blogs.css";
-import { Form } from "./Form";
-import { connect } from "react-redux";
-import { BlogRducers } from "../Reducers/BlogRducers";
+import Form  from "./Form";
+// import { connect } from "react-redux";
+// import { BlogRducers } from "../Reducers/BlogRducers";
 import { Gif } from "./GifSearch";
 const FormNav = (props) => {
-  // const [open, setOpen] = useState(false);
+  
+  
   const handlePost = () => {
     console.log("hello");
     // setOpen(true);
   };
-
+console.log(props,"props");
   return (
     <div
       className="parent-nav"
@@ -99,11 +100,17 @@ const FormNav = (props) => {
           </div>
         </div>
       </nav>
-      {/* {open ? <Form /> : null} */}
-      <Form />
+
+      <Form setOpen={props.setOpen} selectedGif={props.selectedGif} />
       <div className="footer">
-        {props.isOpen? <Gif />:null}
-       
+        {props.isOpen ? (
+          <Gif
+            gifData={props.gifData}
+            setSearch={props.setSearch}
+            setSelectedGif={props.setSelectedGif}
+          />
+        ) : null}
+
         <div style={{ border: "1px solid" }}>
           <img
             src={lock}
@@ -125,14 +132,14 @@ const FormNav = (props) => {
   );
 };
 
-const mapStateToProps = ({BlogRducers}) => {
-  const { gifyData, searchData, selectedData, searchText ,isOpen} = BlogRducers;
-  return {
-    gifyData,
-    searchData,
-    selectedData,
-    searchText,
-    isOpen,
-  };
-};
-export default connect(mapStateToProps,{})(FormNav);
+// const mapStateToProps = ({BlogRducers}) => {
+//   const { gifyData, searchData, selectedData, searchText ,isOpen} = BlogRducers;
+//   return {
+//     gifyData,
+//     searchData,
+//     selectedData,
+//     searchText,
+//     isOpen,
+//   };
+// };
+export default (FormNav);

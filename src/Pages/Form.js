@@ -1,15 +1,14 @@
-import React, {  useState } from "react";
-import { Gif } from "./GifSearch";
+import React from "react";
 import user from "../Icons/user.png";
 import "./Gif.css";
 import { ColorBlocks } from "./ColorBlocks";
-export const Form = (props) => {
-  const [isopen, setIsOpen] = useState(false);
 
+const Form = (props) => {
 
-  
+  console.log(props.selectedGif,"selected gif");
   const handleGifClick = () => {
-    setIsOpen(!isopen);
+    // props.handleGif();
+    props.setOpen(true);
   };
 
   return (
@@ -36,13 +35,23 @@ export const Form = (props) => {
         ></input>
       </div>
 
-      <div style={{display:"flex",flexFlow:"row",justifyContent:"space-around"}}>
+      {}
+      <div style={{width:"200px",height:"200px"}}>
+        <img src={props.selectedGif} />
+      </div>
+
+
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row",
+          justifyContent: "space-around",
+        }}
+      >
         <button
           style={{ width: "20px", height: "20px", backgroundColor: "gray" }}
         ></button>
-
         <div>
-          {" "}
           <ColorBlocks />
         </div>
       </div>
@@ -121,7 +130,19 @@ export const Form = (props) => {
           </div>
         </div>
       </div>
-      <div className="gif">{isopen ? <Gif /> : null}</div>
+      {/* <div className="gif">{isopen ? <Gif /> : null}</div> */}
     </div>
   );
 };
+
+// const mapStateToProps = ({BlogRducers}) => {
+//   const { gifyData, searchData, selectedData, searchText, isOpen } = BlogRducers;
+//   return {
+//     gifyData,
+//     searchData,
+//     selectedData,
+//     searchText,
+//     isOpen,
+//   };
+// }
+export default Form;

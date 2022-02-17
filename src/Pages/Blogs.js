@@ -1,14 +1,49 @@
-import React, { useState } from 'react'
-import FormNav from './FormNav';
-import "./Blogs.css"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { BASE_URL, SEARCH_URL } from "../End_point/BaseUrl";
+import FormNav from "./FormNav";
+import "./Blogs.css";
 export const Blogs = (props) => {
-  const [post, setPost] = useState(
+  const [post, setPost] = useState({
+    url: "https://source.unsplash.com/300x300/?computer",
+    caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  });
+  const [isOpen, setOpen] = useState(false);
+  const [gifData, setGifData] = useState();
+  const [search, setSearch] = useState("");
+  const [selectedGif, setSelectedGif] = useState();
+
+  console.log(selectedGif, "selected gif");
+  function fetchData() {
+    axios
+      .get(BASE_URL)
+      .then((res) => setGifData(res.data))
+      .catch((err) => console.log(err, "something went wrong"));
+  }
+  console.log(gifData, "gifData");
+  function getSearchData() {
+    axios
+      .get(SEARCH_URL, {
+        params: {
+          q: search,
+          api_key: "dc6zaTOxFJmzC",
+        },
+      })
+      .then((res) => setGifData(res.data))
+      .catch((err) => console.log(err, "error"));
+  }
+  // const handleGif = () => {
+  //   console.log("hello");
+  //   setOpen(true);
+  // };
+
+  useEffect(() => {
+    fetchData();
     {
-      url: "https://source.unsplash.com/300x300/?computer",
-      caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    },
-  );
-  
+      search ? getSearchData() : console.log("getsearch");
+    }
+  }, [search]);
+  console.log(gifData, "gif -data");
   return (
     <div className="container" style={{ overflow: "hidden" }}>
       <div
@@ -19,7 +54,14 @@ export const Blogs = (props) => {
           width: "50vw",
         }}
       >
-        <FormNav />
+        <FormNav
+          gifData={gifData}
+          setSearch={setSearch}
+          isOpen={isOpen}
+          setOpen={setOpen}
+          selectedGif={selectedGif}
+          setSelectedGif={setSelectedGif}
+        />
       </div>
       <div
         class="card"
@@ -72,4 +114,4 @@ export const Blogs = (props) => {
       </div>
     </div>
   );
-}
+};
