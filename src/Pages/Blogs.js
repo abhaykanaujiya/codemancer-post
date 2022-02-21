@@ -32,10 +32,7 @@ export const Blogs = (props) => {
       .then((res) => setGifData(res.data))
       .catch((err) => console.log(err, "error"));
   }
-  // const handleGif = () => {
-  //   console.log("hello");
-  //   setOpen(true);
-  // };
+ 
 
   useEffect(() => {
     fetchData();

@@ -4,7 +4,9 @@ export const Gif = (props) => {
 
   const handleSelect = (image) => {
     props.setSelectedGif(image);
-  console.log(image,"image")
+    // console.log(image, "image")
+    
+    props.setOpen(false)
 }
   console.log(props.gifData,"gif data");
   const handleChange = (e) => {

@@ -4,10 +4,9 @@ import "./Gif.css";
 import { ColorBlocks } from "./ColorBlocks";
 
 const Form = (props) => {
-
-  console.log(props.selectedGif,"selected gif");
+  console.log(props.selectedGif, "selected gif");
   const handleGifClick = () => {
-    // props.handleGif();
+    
     props.setOpen(true);
   };
 
@@ -35,11 +34,11 @@ const Form = (props) => {
         ></input>
       </div>
 
-      {}
-      <div style={{width:"200px",height:"200px"}}>
-        <img src={props.selectedGif} />
-      </div>
-
+      {props.selectedGif ? (
+        <div style={{ width: "483px", height: " 352px" }}>
+          <img src={props.selectedGif} alt="img" style={{width:"inherit",height:"inherit"}}/>
+        </div>
+      ) : null}
 
       <div
         style={{
@@ -135,14 +134,4 @@ const Form = (props) => {
   );
 };
 
-// const mapStateToProps = ({BlogRducers}) => {
-//   const { gifyData, searchData, selectedData, searchText, isOpen } = BlogRducers;
-//   return {
-//     gifyData,
-//     searchData,
-//     selectedData,
-//     searchText,
-//     isOpen,
-//   };
-// }
 export default Form;

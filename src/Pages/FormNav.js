@@ -107,6 +107,7 @@ console.log(props,"props");
           <Gif
             gifData={props.gifData}
             setSearch={props.setSearch}
+            setOpen={props.setOpen}
             setSelectedGif={props.setSelectedGif}
           />
         ) : null}
