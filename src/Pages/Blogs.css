@@ -10,12 +10,12 @@
   width: fit-content;
   padding: 3px;
 }
-hr {
+/* hr {
   height: 10px;
   color: black;
   margin-left: 10px;
   margin-right: 10px;
-}
+} */
 .form-body {
   border: "2px solid";
   width: "500px";

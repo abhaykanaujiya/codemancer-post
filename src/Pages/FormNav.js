@@ -1,68 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import pen from "../Icons/pencil.png";
 import photo from "../Icons/photo-video.png";
 import crossed from "../Icons/letter-x.png";
 import lock from "../Icons/locks.png";
-import "./Blogs.css";
-import Form  from "./Form";
-// import { connect } from "react-redux";
-// import { BlogRducers } from "../Reducers/BlogRducers";
+import Form from "./Form";
 import { Gif } from "./GifSearch";
+import { VerticalLine } from "./VerticalLine";
+import "./VerticalLine.css";
+import "./FormNav.css";
 const FormNav = (props) => {
-  
-  
   const handlePost = () => {
     console.log("hello");
     // setOpen(true);
   };
-console.log(props,"props");
+  console.log(props, "props");
   return (
-    <div
-      className="parent-nav"
-      style={{
-        border: " 1px solid lightgray",
-        boxShadow: " 0px 0px 2px 3px  lightgrey",
-        // margin: "10px",
-
-        display: "flex",
-        flexFlow: "column",
-        justifyContent: "space-between",
-        background: " white",
-        // width: " 48vw",
-      }}
-    >
-      <nav
-        className="nav-body"
-        style={{
-          display: "flex",
-          flexFlow: "row",
-          backgroundColor: " #e9e9e9",
-          justifyContent: "space-between",
-          alignItems: " center",
-          cursor: "context-menu",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexFlow: "row",
-            backgroundColor: " #e9e9e9",
-          }}
-        >
-          <div
-            className="btn-1"
-            onClick={handlePost}
-            style={{ backgroundColor: "whitesmoke", width: "95px" }}
-          >
-            <img
-              src={pen}
-              alt="img"
-              style={{ width: "15px", height: "13px" }}
-            />
+    <div className="parent-nav">
+      <nav className="nav-body">
+        <div className="top">
+          <div className="btn-1" onClick={handlePost}>
+            <img className="btn1-img" src={pen} alt="img" />
             Compose Post
           </div>
-          <div>
-            <hr></hr>
+          <div className="line-body">
+            <VerticalLine />
           </div>
           <div className="btn-2">
             <img
@@ -72,8 +33,8 @@ console.log(props,"props");
             />
             Photo/Video Album
           </div>
-          <div>
-            <hr></hr>
+          <div className="line-body">
+            <VerticalLine />
           </div>
           <div className="btn-3">
             <img
@@ -133,14 +94,4 @@ console.log(props,"props");
   );
 };
 
-// const mapStateToProps = ({BlogRducers}) => {
-//   const { gifyData, searchData, selectedData, searchText ,isOpen} = BlogRducers;
-//   return {
-//     gifyData,
-//     searchData,
-//     selectedData,
-//     searchText,
-//     isOpen,
-//   };
-// };
-export default (FormNav);
+export default FormNav;

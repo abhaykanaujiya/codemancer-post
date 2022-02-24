@@ -1,0 +1,63 @@
+.parent-nav {
+  border: 1px solid lightgray;
+  box-shadow: 0px 0px 2px 3px lightgrey;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: white;
+}
+.nav-body {
+  display: flex;
+  flex-flow: row;
+  background-color: #e9e9e9;
+  justify-content: space-between;
+  align-items: center;
+  cursor: context-menu;
+}
+.top {
+  display: flex;
+  flex-flow: row;
+  background-color: #e9e9e9;
+}
+
+.btn-1 {
+  background-color: whitesmoke;
+  width: 95px;
+}
+
+.btn1-img {
+  width: 15px;
+  height: 13px;
+}
+
+.btn-1 {
+  font-weight: 400;
+  font-size: 11px;
+  display: flex;
+
+  align-items: center;
+}
+.btn-2 {
+  font-weight: 400;
+  font-size: 11px;
+  display: flex;
+  padding-left: 9px;
+  padding-right: 10px;
+  align-items: center;
+  color: #4267b2;
+}
+.btn-3 {
+  font-weight: 400;
+  font-size: 11px;
+  display: flex;
+  padding-left: 9px;
+  padding-right: 10px;
+  align-items: center;
+  color: #4267b2;
+}
+.btn-4 {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+}

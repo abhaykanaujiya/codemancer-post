@@ -32,7 +32,6 @@ export const Blogs = (props) => {
       .then((res) => setGifData(res.data))
       .catch((err) => console.log(err, "error"));
   }
- 
 
   useEffect(() => {
     fetchData();
