@@ -24,16 +24,19 @@
   width: 47.2vw;
 }
 .selected-gif-container {
-  width: 666px;
-  height: 420px;
+  border: 2px solid;
+  width: 46vw;
+  height: 25.7vw;
+  margin-top: 10px;
 }
 .selected-img {
-  width: 666px;
-  height: 420px;
+  width: 46vw;
 }
 .color-block-body {
   display: flex;
   flex-flow: row;
+  align-items: center;
+  margin-top: 10px;
 }
 .cb-icon-body {
   width: 20px;

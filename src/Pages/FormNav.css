@@ -61,3 +61,29 @@
   display: flex;
   align-items: center;
 }
+.footer-elements {
+  display: flex;
+  flex-flow: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.drop-down {
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin-top: 2px;
+  border-radius: 0.1rem;
+}
+.select {
+  height: 16px;
+  border: none;
+  background-color: aliceblue;
+}
+.footer-gif-section{
+      border: 1px solid;
+    /* margin-left: -7px; */
+    height: 170px;
+    width: 191px;
+    margin-top: 153px;
+}

@@ -56,6 +56,7 @@ const Form = (props) => {
             alt="img"
           ></img>
         </div>
+        
         <div className="color-blocks">
           <ColorBlocks />
         </div>

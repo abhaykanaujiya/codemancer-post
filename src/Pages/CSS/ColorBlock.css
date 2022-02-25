@@ -1,0 +1,66 @@
+.block-body {
+  width: 40vw;
+}
+.clr1 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: tomato;
+}
+.clr2 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(119, 11, 101);
+}
+.clr3 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(62, 16, 116);
+}
+.clr4 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(74, 95, 14);
+}
+.clr5 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(20, 226, 89);
+}
+.clr6 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(49, 243, 250);
+}
+.clr7 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(202, 128, 184);
+}
+.clr8 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: rgb(243, 188, 195);
+}
+.clr9 {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: cadetblue;
+}

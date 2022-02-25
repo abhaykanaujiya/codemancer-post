@@ -64,31 +64,38 @@ const FormNav = (props) => {
 
       <Form setOpen={props.setOpen} selectedGif={props.selectedGif} />
       <div className="footer">
-        {props.isOpen ? (
-          <Gif
-            gifData={props.gifData}
-            setSearch={props.setSearch}
-            setOpen={props.setOpen}
-            setSelectedGif={props.setSelectedGif}
-          />
-        ) : null}
-
-        <div style={{ border: "1px solid" }}>
-          <img
-            src={lock}
-            alt="img"
-            style={{ width: "10px", marginRight: "-10px" }}
-          />
-          <select
-            className="select"
-            style={{ background: "aliceblue", border: " none" }}
-          >
-            <oprtion></oprtion>
-            <option>only me</option>
-            <option>friends</option>
-          </select>
+        <div className="footer-gif-section">
+          {props.isOpen ? (
+            <Gif
+              gifData={props.gifData}
+              setSearch={props.setSearch}
+              setOpen={props.setOpen}
+              setSelectedGif={props.setSelectedGif}
+            />
+          ) : null}
         </div>
-        <button className="button">Post</button>
+
+        <div className="footer-elements">
+          <div className="drop-down">
+            <img
+              src={lock}
+              alt="img"
+              style={{ width: "10px", marginRight: "-10px" }}
+            />
+            <select
+              className="select"
+              style={{ background: "aliceblue", border: " none" }}
+            >
+              <oprtion></oprtion>
+              <option>only me</option>
+              <option>friends</option>
+            </select>
+          </div>
+
+          <div>
+            <button className="button">Post</button>
+          </div>
+        </div>
       </div>
     </div>
   );
