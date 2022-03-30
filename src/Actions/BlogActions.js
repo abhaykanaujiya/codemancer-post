@@ -6,7 +6,7 @@ export const getGifData = (isOpen) => {
       console.log(res.data);
       return res.data
     })
-    dispatch({type:""})
+    dispatch({type:"gif"})
     dispatch({type:"GET_GIF",payload:resultData})
   }
 }
