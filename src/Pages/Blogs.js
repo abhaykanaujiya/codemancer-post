@@ -44,7 +44,10 @@ export const Blogs = (props) => {
     <div className="container" style={{ overflow: "hidden" }}>
       <div
         style={{
-          width: "100%",
+          position: "fixed",
+          backdropFilter: "brightness(.5)",
+          height: "100%",
+          width: "50%",
         }}
       >
         <FormNav

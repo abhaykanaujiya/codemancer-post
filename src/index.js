@@ -10,9 +10,9 @@ import { Provider } from "react-redux";
 
 
 ReactDOM.render(
-  <Provider>
+  <div>
     <App />
-  </Provider>,
+  </div>,
   document.getElementById("root")
 );
 

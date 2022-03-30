@@ -24,7 +24,6 @@
 }
 
 .gif-list {
-  border: 1px solid rgb(126, 126, 126);
   margin: 5px;
   height: 130px;
 }
@@ -33,7 +32,7 @@
   height: 13vw;
 }
 .list-images {
-  width: 269px;
+  width: 310px;
   height: 130px;
   padding-bottom: 10px;
 }
