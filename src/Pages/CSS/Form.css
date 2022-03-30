@@ -1,6 +1,5 @@
 .form-body {
-  width: 46vw;
-  border: 2px solid;
+  /* border: 2px solid; */
   background-color: whitesmoke;
   display: flex;
   flex-flow: column;
@@ -22,15 +21,17 @@
 .input-field {
   height: 78px;
   width: 47.2vw;
+  font-size: 17px;
+  border: none;
 }
 .selected-gif-container {
-  border: 2px solid;
-  width: 46vw;
-  height: 25.7vw;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 .selected-img {
-  width: 46vw;
+  width: 100%;
+  height: 23.7vw;
 }
 .color-block-body {
   display: flex;
@@ -47,10 +48,10 @@
   height: 20px;
 }
 .Tags-body {
-  display: flex;
+  /* display: flex;
   flex-flow: wrap;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: space-around; */
   padding: 10px;
 }
 .tags-container {

@@ -5,14 +5,12 @@
 .gif-body {
   border: 1px solid grey;
   box-shadow: 0px 0px 2px 1px grey;
-  height: 170px;
-  width: 191px;
+  height: 20vh;
+  backdrop-filter: brightness(0.5);
   background-color: white;
-  overflow: auto;
-  overflow-x: hidden;
-  margin-right: 15vw;
-  /* margin-top: 10vw; */
+  overflow: scroll;
   border-radius: 0.4rem;
+  overflow-x: hidden;
 }
 
 .search-gif {
@@ -20,12 +18,13 @@
   width: 20vw;
   height: 2vw;
   margin-top: 5px;
-  margin-top: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
   box-shadow: 0px 0px 2px 1px grey;
 }
 
 .gif-list {
-  border: 1px solid lightgrey;
+  border: 1px solid rgb(126, 126, 126);
   margin: 5px;
   height: 130px;
 }
@@ -34,7 +33,7 @@
   height: 13vw;
 }
 .list-images {
-  width: 22vw;
-  height: 15vw;
+  width: 269px;
+  height: 130px;
   padding-bottom: 10px;
 }

@@ -80,10 +80,17 @@
   border: none;
   background-color: aliceblue;
 }
-.footer-gif-section{
-      border: 1px solid;
-    /* margin-left: -7px; */
-    height: 170px;
-    width: 191px;
-    margin-top: 153px;
+.footer-gif-section {
+  margin-left: 17px;
+  height: 20vh;
+  width: 18vw;
+  margin-top: 147px;
+}
+.footer {
+  background: rgb(240, 240, 240);
+  display: flex;
+  justify-content: end;
+  height: 3vw;
+  align-items: center;
+  justify-content: space-between;
 }
