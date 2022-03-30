@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/codemancer-post/static/css/main.07ecb1f8.css",
+    "main.js": "/codemancer-post/static/js/main.1cd868b0.js",
+    "static/media/user.png": "/codemancer-post/static/media/user.d1b58d587e784bedc7ef.png",
+    "static/media/letter-x.png": "/codemancer-post/static/media/letter-x.745f16aefbb322d4e675.png",
+    "index.html": "/codemancer-post/index.html",
+    "main.07ecb1f8.css.map": "/codemancer-post/static/css/main.07ecb1f8.css.map",
+    "main.1cd868b0.js.map": "/codemancer-post/static/js/main.1cd868b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07ecb1f8.css",
+    "static/js/main.1cd868b0.js"
+  ]
+}
