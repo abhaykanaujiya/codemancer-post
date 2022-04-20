@@ -12,7 +12,8 @@ export const Blogs = (props) => {
   const [gifData, setGifData] = useState();
   const [search, setSearch] = useState("");
   const [selectedGif, setSelectedGif] = useState();
-
+  console.log(gifData);
+  console.log(post)
   console.log(selectedGif, "selected gif");
   function fetchData() {
     axios
